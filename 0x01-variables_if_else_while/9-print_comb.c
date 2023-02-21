@@ -16,6 +16,7 @@
  * Return: Always 0 (success)
  */
 int main(void)
+	i = 0;
 {
 	while (i < 100)
 	{
