@@ -1,29 +1,19 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
 /**
- * main - This program will assign a random number to the variable n
- * Return: 0
+ * positive_or_negative - checks for positive or negative numbers
+ *
+ *@i; the number to be checked
+ *
+ *Return: always 0
  */
-int main(void)
-{
-int n;
 
-srand(time(0));
-n = rand() - RAND_MAX / 2;
-if (n > 0)
+
+void positive_or_negative(int i)
 {
-	printf("%d is positive\n", n);
-}
-else if (n == 0)
-{
-	printf("%d is zero\n", n);
-}
+if (i < 0)
+printf("%d is negative\n", i);
 else
-	printf("%d is negative\n", n);
-return (0);
+printf("%d is positive\n", i);
+
 }
