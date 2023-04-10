@@ -1,4 +1,5 @@
 #include "main.h"
+#include <iostream>
 
 /**
 * print_binary - prints decimal number in binary
@@ -7,21 +8,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int i, num = 0;
-	unsigned long int first;
+	if (n > 1)
+		print_binary(n >> 1);
 
-	for (i = 58; i >= 0; i--)
-	{
-		first = n >> i;
-
-		if (first & 1)
-		{
-			_putchar('1');
-			num++;
-		}
-		else if (num)
-			_putchar('0');
-	}
-	if (num == NULL)
-		_putchar('0');
+	cout<<((n & 1) + '0');
 }
